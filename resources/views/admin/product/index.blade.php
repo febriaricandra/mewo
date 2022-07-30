@@ -79,9 +79,13 @@
                                 </a>
                         </td>
                         <td>
-                            <button class="btn btn-danger">
-                                <i class="bi-trash"></i>
-                            </button>
+                            <form action="{{route('admin.product.delete', $product->getId())}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
+                                    <i class="bi-trash"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
