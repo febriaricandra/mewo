@@ -5,7 +5,7 @@
 <div class="card">
     <div class="card-header">
         <div class="alert alert-success" role="alert">
-            Congratulations! You have successfully purchased the products.
+            Congratulations! You have successfully purchased the products. Order number is <b>#{{$viewData["order"]->getId()}}</b>
         </div>
     </div>
 </div>

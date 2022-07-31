@@ -86,7 +86,7 @@ class Item extends Model
     {
         $this->attributes['updated_at'] = $updated_at;
     }
-    public function order()
+    public function orders()
     {
         return $this->belongsTo(Order::class);
     }
