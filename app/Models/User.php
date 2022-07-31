@@ -20,7 +20,7 @@ class User extends Authenticatable
      */
 
      /**
-      * USER ATTRIBUTES 
+      * USER ATTRIBUTES
       * $this->attributes["id"] - int - contains the user primary key (id)
       * $this->attributes["name"] - string - contains the user name
       * $this->attributes["email"] - string - contains the user email
@@ -59,73 +59,96 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function getId(){
+    public function getId()
+    {
         return $this->attributes['id'];
     }
-    public function setId($id){
+    public function setId($id)
+    {
         $this->attributes['id'] = $id;
     }
-    public function getName(){
+    public function getName()
+    {
         return $this->attributes['name'];
     }
-    public function setName($name){
+    public function setName($name)
+    {
         $this->attributes['name'] = $name;
     }
-    public function getEmail(){
+    public function getEmail()
+    {
         return $this->attributes['email'];
     }
-    public function setEmail($email){
+    public function setEmail($email)
+    {
         $this->attributes['email'] = $email;
     }
-    public function getEmailVerifiedAt(){
+    public function getEmailVerifiedAt()
+    {
         return $this->attributes['email_verified_at'];
     }
-    public function setEmailVerifiedAt($email_verified_at){
+    public function setEmailVerifiedAt($email_verified_at)
+    {
         $this->attributes['email_verified_at'] = $email_verified_at;
     }
-    public function getPassword(){
+    public function getPassword()
+    {
         return $this->attributes['password'];
     }
-    public function setPassword($password){
+    public function setPassword($password)
+    {
         $this->attributes['password'] = $password;
     }
-    public function getRememberToken(){
+    public function getRememberToken()
+    {
         return $this->attributes['remember_token'];
     }
-    public function setRememberToken($remember_token){
+    public function setRememberToken($remember_token)
+    {
         $this->attributes['remember_token'] = $remember_token;
     }
-    public function getRole(){
+    public function getRole()
+    {
         return $this->attributes['role'];
     }
-    public function setRole($role){
+    public function setRole($role)
+    {
         $this->attributes['role'] = $role;
     }
-    public function getBalance(){
+    public function getBalance()
+    {
         return $this->attributes['balance'];
     }
-    public function setBalance($balance){
+    public function setBalance($balance)
+    {
         $this->attributes['balance'] = $balance;
     }
-    public function getCreatedAt(){
+    public function getCreatedAt()
+    {
         return $this->attributes['created_at'];
     }
-    public function setCreatedAt($created_at){
+    public function setCreatedAt($created_at)
+    {
         $this->attributes['created_at'] = $created_at;
     }
-    public function getUpdatedAt(){
+    public function getUpdatedAt()
+    {
         return $this->attributes['updated_at'];
     }
-    public function setUpdatedAt($updated_at){
+    public function setUpdatedAt($updated_at)
+    {
         $this->attributes['updated_at'] = $updated_at;
     }
-    public function order(){
+    public function order()
+    {
         return $this->hasMany(Order::class);
     }
-    public function getOrder(){
+    public function getOrder()
+    {
         return $this->order;
     }
-    public function setOrder($order){
+    public function setOrder($order)
+    {
         $this->order = $order;
     }
 }

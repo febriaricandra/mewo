@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Item;
 
@@ -19,7 +18,8 @@ class Product extends Model
      * $this->attributes["updated_at"] - timestamp - contains the product update date
      * $this->items - item - contains associated Item
      */
-    public static function validate($request){
+    public static function validate($request)
+    {
         $request->validate([
             "name"=>"required|max:255",
             "description"=>"required",
@@ -27,7 +27,8 @@ class Product extends Model
             'image' => 'image',
         ]);
     }
-    public static function sumPricesByQuantities($products, $productsInSession){
+    public static function sumPricesByQuantities($products, $productsInSession)
+    {
         $total = 0;
         foreach ($products as $product) {
             $total = $total + ($product->getPrice()*$productsInSession[$product->getId()]);
@@ -99,13 +100,16 @@ class Product extends Model
     {
         $this->attributes['updated_at'] = $updatedAt;
     }
-    public function items(){
+    public function items()
+    {
         return $this->hasMany(Item::class);
     }
-    public function getItems(){
+    public function getItems()
+    {
         return $this->items;
     }
-    public function setItems($items){
+    public function setItems($items)
+    {
         $this->items = $items;
     }
 }
